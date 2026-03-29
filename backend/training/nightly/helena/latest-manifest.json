@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-03-29T14:32:23.256Z",
+  "source": "helena-precision.service",
+  "telemetry": {
+    "lookbackDays": 14,
+    "analyzedSamples": 268,
+    "successCount": 98,
+    "failedCount": 170,
+    "successRate": 0.366,
+    "avgTokenUsage": 0,
+    "avgExecutionTimeMs": 2868,
+    "avgConfidence": 62,
+    "lowConfidenceCount": 32
+  },
+  "resultSummary": {
+    "confidence": 58,
+    "source": "fallback",
+    "gaps": []
+  },
+  "datasetArtifacts": {
+    "sftPath": "D:\\PROJECTs\\Aethrix\\Reex\\backend\\training\\nightly\\helena\\2026-03-29\\manager_sft_incremental.jsonl",
+    "dpoPath": "D:\\PROJECTs\\Aethrix\\Reex\\backend\\training\\nightly\\helena\\2026-03-29\\manager_dpo_incremental.jsonl",
+    "sftRows": 37,
+    "dpoRows": 30
+  },
+  "rollout": {
+    "metrics": {
+      "timestamp": "2026-03-29T14:32:23.256Z",
+      "confidenceScore": 62,
+      "relevanceScore": 12,
+      "successRate": 0.366,
+      "failureRate": 0.634,
+      "lowConfidenceRate": 0.119,
+      "sampleCount": 268
+    },
+    "gate": {
+      "canPromote": false,
+      "reasons": [
+        "Success rate 0.366 below 0.62.",
+        "Confidence delta 0 below required 2.",
+        "Relevance delta 1 below required 2."
+      ],
+      "thresholds": {
+        "minConfidenceDelta": 2,
+        "minRelevanceDelta": 2,
+        "minSuccessRate": 0.62
+      },
+      "current": {
+        "timestamp": "2026-03-29T14:32:23.256Z",
+        "confidenceScore": 62,
+        "relevanceScore": 12,
+        "successRate": 0.366,
+        "failureRate": 0.634,
+        "lowConfidenceRate": 0.119,
+        "sampleCount": 268
+      },
+      "previous": {
+        "timestamp": "2026-03-29T14:28:59.154Z",
+        "confidenceScore": 62,
+        "relevanceScore": 11,
+        "successRate": 0.368,
+        "failureRate": 0.632,
+        "lowConfidenceRate": 0.119,
+        "sampleCount": 261
+      }
+    }
+  }
+}

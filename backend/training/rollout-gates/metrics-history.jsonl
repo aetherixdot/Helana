@@ -1,0 +1,4 @@
+{"timestamp":"2026-03-29T14:27:48.179Z","confidenceScore":63,"relevanceScore":11,"successRate":0.372,"failureRate":0.628,"lowConfidenceRate":0.117,"sampleCount":247}
+{"timestamp":"2026-03-29T14:28:03.230Z","confidenceScore":63,"relevanceScore":11,"successRate":0.375,"failureRate":0.625,"lowConfidenceRate":0.121,"sampleCount":248}
+{"timestamp":"2026-03-29T14:28:59.154Z","confidenceScore":62,"relevanceScore":11,"successRate":0.368,"failureRate":0.632,"lowConfidenceRate":0.119,"sampleCount":261}
+{"timestamp":"2026-03-29T14:32:23.256Z","confidenceScore":62,"relevanceScore":12,"successRate":0.366,"failureRate":0.634,"lowConfidenceRate":0.119,"sampleCount":268}

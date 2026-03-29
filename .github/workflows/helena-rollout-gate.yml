@@ -1,0 +1,36 @@
+name: Helena Rollout Gate
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  gate-check:
+    name: Evaluate Helena Promotion Gate
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure rollout metrics exist
+        run: |
+          if [ ! -f "training/rollout-gates/metrics-history.jsonl" ]; then
+            echo "No Helena rollout metrics found. Promotion is blocked until nightly precision analysis generates baseline metrics."
+            exit 1
+          fi
+
+      - name: Enforce Helena rollout gate
+        run: npm run gate:helena-rollout
